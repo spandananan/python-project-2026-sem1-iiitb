@@ -2,9 +2,10 @@ import React from 'react'
 import './App.css'
 import { useState } from 'react'
 
-function EventForm() {
+function AddEvent() {
 
     const [title , setTitle]= useState('')
+    const [pass , setPass]= useState('')
     const [club , setClub]= useState('')
     const [date , setDate]= useState('')
     const [venue , setVenue]= useState('')
@@ -21,6 +22,7 @@ function EventForm() {
       body: JSON.stringify({
         title: title,
         description:desc,
+        password:pass,
         venue: venue,
         date: date,
         members:[],
@@ -30,9 +32,15 @@ function EventForm() {
       }),
     });
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
+    console.log(response)
+    
+    if(response.status == 403){
+        alert("Access Denied")
+      }
+    if(response.status == 200){
+        alert("Event Added Successfully")
+      }
+    
 
     const data = await response.json();
     console.log('Success:', data);
@@ -73,6 +81,12 @@ function EventForm() {
           <div className="relative">
             <label for="venue" className="leading-7 text-sm text-gray-400">Venue</label>
             <input value={venue} onChange={(e)=>{setVenue(e.target.value)}} type="text" id="venue" name="venue" className="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-green-500 focus:bg-gray-900 focus:ring-2 focus:ring-green-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
+          </div>
+        </div>
+        <div className="p-2 w-1/2">
+          <div className="relative">
+            <label for="password" className="leading-7 text-sm text-gray-400">Password</label>
+            <input value={pass} onChange={(e)=>{setPass(e.target.value)}} type="password" id="password" name="password" className="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-green-500 focus:bg-gray-900 focus:ring-2 focus:ring-green-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
           </div>
         </div>
         <div className="p-2 w-full">
@@ -121,4 +135,4 @@ function EventForm() {
   )
 }
 
-export default EventForm
+export default AddEvent

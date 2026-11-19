@@ -45,6 +45,7 @@ function App() {
                 <p className="leading-relaxed my-2">Guests : {ev.guests.map((e)=>{return(
                   <span className="font-semibold title-font mx-2 bg-gray-800 px-2 py-1 rounded-lg w-fit">{e}</span>
                 )})}</p>
+                <h2 className="mt-5 leading-relaxed font-light mb-2">{ev.description}</h2>
                 <a className="text-green-400 inline-flex items-center mt-4">Register
                   <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M5 12h14"></path>
