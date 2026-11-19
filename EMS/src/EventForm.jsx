@@ -20,6 +20,7 @@ function EventForm() {
       },
       body: JSON.stringify({
         title: title,
+        description:desc,
         venue: venue,
         date: date,
         members:[],

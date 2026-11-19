@@ -34,6 +34,7 @@
                 "events": [
                         {
                                 "title": "Tech Triad",
+                                "description": "A three-part tech event featuring talks, a live demo, and a hands-on challenge. Open to all students curious about software, hardware, and AI.",
                                 "venue": "Extension Campus, Room 101",
                                 "date": "05-11-2026",
                                 "members": [
@@ -58,6 +59,7 @@
                         },
                         {
                                 "title": "Build-a-thon Weekend",
+                                "description": "A weekend-long hackathon where teams ideate, build, and present working prototypes to a panel of judges. Mentors will be available throughout.",
                                 "venue": "Innovation Lab",
                                 "date": "21-11-2026",
                                 "members": [
@@ -113,6 +115,7 @@
                 "events": [
                         {
                                 "title": "Pixel Panic: Game Jam",
+                                "description": "A fast-paced game jam where teams build a playable game from scratch around a surprise theme. Artists, coders, and designers are all welcome.",
                                 "venue": "Computer Lab 2",
                                 "date": "14-11-2026",
                                 "members": [
@@ -135,6 +138,7 @@
                         },
                         {
                                 "title": "Retro Arcade Night",
+                                "description": "An evening of classic arcade games, friendly tournaments, and prizes. Come relive the golden age of gaming with friends.",
                                 "venue": "Student Activity Centre",
                                 "date": "28-11-2026",
                                 "members": [
@@ -187,6 +191,7 @@
                 "events": [
                         {
                                 "title": "Strings & Stories",
+                                "description": "An open-air evening of acoustic music paired with storytelling and poetry. Relax under the sky and enjoy live performances by students.",
                                 "venue": "Open Air Theatre",
                                 "date": "12-11-2026",
                                 "members": [
@@ -209,6 +214,7 @@
                         },
                         {
                                 "title": "Campus Unplugged",
+                                "description": "A stripped-down live concert showcasing solo and band acts from across campus. Expect covers, originals, and surprise collaborations.",
                                 "venue": "Main Auditorium",
                                 "date": "03-12-2026",
                                 "members": [
@@ -261,6 +267,7 @@
                 "events": [
                         {
                                 "title": "Open Mic: Unfiltered",
+                                "description": "An open stage for poetry, stand-up, music, and storytelling. Sign up on the spot and share your talent with a supportive audience.",
                                 "venue": "Central Courtyard",
                                 "date": "18-11-2026",
                                 "members": [
@@ -283,6 +290,7 @@
                         },
                         {
                                 "title": "Theatre in a Day",
+                                "description": "A one-day theatre workshop where participants write, rehearse, and perform a short play by evening. No prior acting experience needed.",
                                 "venue": "Seminar Hall B",
                                 "date": "06-12-2026",
                                 "members": [
@@ -336,6 +344,7 @@
                 "events": [
                         {
                                 "title": "Launchpad: Startup Sprint",
+                                "description": "A startup sprint where teams pitch an idea, validate it, and present a business plan to mentors and guest entrepreneurs.",
                                 "venue": "Innovation Hub",
                                 "date": "20-11-2026",
                                 "members": [
@@ -358,6 +367,7 @@
                         },
                         {
                                 "title": "Design Thinking Challenge",
+                                "description": "A hands-on workshop where teams use design thinking to solve a real campus problem, from empathy mapping to prototype and pitch.",
                                 "venue": "Workshop Studio",
                                 "date": "10-12-2026",
                                 "members": [

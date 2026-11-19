@@ -22,6 +22,7 @@ DATA_DIR = os.path.join(CURRENT_DIR, "data.json")
 
 class Event(BaseModel):
     title: str | None = None
+    description: str | None = None
     venue: str | None = None
     date: str | None = None
     club: str | None = None
@@ -69,7 +70,7 @@ def find_position(club : str):
     for i in range(len(data)):
         if club.strip().lower() in data[i]["club"].strip().lower():
             return i
-    return len(data)
+    return -1
 
 #TODO -> If two events happen to have the event str inside of them, only the first one turns up. Do I wanna fix it this?
 def find_position_of_event(event: str, club: str):
@@ -85,20 +86,28 @@ def find_position_of_event(event: str, club: str):
 #---------------------------------------------------------------------------------------------------------------------------------------------------
 
 #GET EVENT DETAILS
-@app.get("/events", summary="Get All Events" , response_model=list[Event] )
-async def get_events(club_name : str | None = None, date_after:Annotated[str|None, Field(pattern=r"^\d{2}-\d{2}-\d{4}$")] = None):
-    data = []
+@app.get("/events", summary="Get All Events", response_model=list[Event] )
+def get_event(club_name: str | None = None , date_after: Annotated[str | None , Field(pattern=r"^\d{2}-\d{2}-\d{4}$") ] = None , event_name: str| None=None):
     events = []
-    with open(DATA_DIR , "r" , encoding="utf-8") as file:
-        data = json.load(file)
-    for club in data:
-        if(club_name is not None and club_name.lower() not in club["club"].lower()):
-            continue
-        for i in range(len(club["events"])):
-            if(date_after is not None and not comes_after(club["events"][i]["date"], date_after)):
+    event_search = load_data()
+    for event in event_search:
+        if club_name is not None and club_name.lower() not in event["club"].lower() :
+            continue       
+
+        for j in range(len(event["events"])):
+            ev = event["events"][j] 
+
+            if date_after is not None and not comes_after(ev.get("date", ""), date_after):
                 continue
-            club["events"][i]["club"] = club["club"]
-            events.append(club["events"][i])
+
+            if event_name is not None:
+                if event_name.lower() not in ev["title"].strip().lower():
+                    continue
+
+            copy = ev.copy()
+            copy["club"] = event["club"]
+            events.append(copy)
+
     return events
 
 #POST EVENT DETAILS
@@ -108,6 +117,9 @@ def add_events(club: str, body: Event, role : str = "club core"):
         #Loading data from JSON
         data = load_data()
         position = find_position(club)
+
+        if(position == -1):
+            raise HTTPException(status_code=400, detail="Invalid Club")
 
         #Appending to events        
         event_details = body.model_dump(exclude_none = True)
@@ -119,7 +131,6 @@ def add_events(club: str, body: Event, role : str = "club core"):
 
     else:
         raise HTTPException(status_code=403, detail="Access Denied.")
-
 
 #DELETE EVENTS
 @app.delete("/events")
@@ -136,7 +147,6 @@ def delete_events(event: str = "Tech Triad" , club:str = "Zense", role: str = "c
             json.dump(data, file, indent = 8)
 
         return data 
-
 
 #PATCH EVENT DETAILS
 @app.patch("/events")
@@ -156,3 +166,93 @@ def patch_events(body: Event, event: str = "Strings & Stories" , club:str = "Sym
 
     else:
         raise HTTPException(status_code=403, detail = "Access Denied.")
+
+# ANALYTICS : Core member , Club Member And Participant
+@app.get("/analytics/core")
+def number_of_events_for_each_club_core(club_name: str | None = None , core_name: str | None = None):
+    core_members_of_this_club = {}
+    events = load_data()
+    for event in events:
+        if club_name is not None and club_name.lower().strip() not in event["club"].lower():
+            continue
+
+        club_members_list = event.get("members", []) or []
+        core_names_set = set()
+
+        for j in club_members_list:
+            if j.get("isCore") is True:
+                core_names_set.add(j.get("name").strip().lower())
+
+        events_of_this_club = event["events"]
+
+        for ev in events_of_this_club:
+            members_of_this_event = ev.get("members",[]) or []
+
+            for member_name in members_of_this_event:
+
+                if member_name.strip().lower() not in core_names_set:
+                    continue
+
+                if core_name is not None and core_name.lower().strip() != member_name.lower().strip():
+                    continue
+
+                core_members_of_this_club[member_name] = core_members_of_this_club.get(member_name,0) + 1
+
+    return core_members_of_this_club
+
+@app.get("/analytics/member")
+def number_of_events_for_each_club_member(club_name: str | None = None , member : str | None = None):
+    events_participation_of_non_core_members = {}
+    data = load_data()
+    for club in data:
+        if club_name is not None and club_name.strip().lower() not in club["club"].strip().lower():
+            continue
+
+        club_members_list = club.get("members", []) or []
+        member_set = set()
+
+        for j in club_members_list:
+            if j.get("isCore") is False:
+                member_set.add(j.get("name").strip().lower())
+
+        events_of_this_club = club["events"]
+
+        for ev in events_of_this_club:
+            volunteers_of_this_event = ev.get("volunteers",[]) or []
+
+            for member_name in volunteers_of_this_event:
+
+                if member_name not in member_set:
+                    continue
+
+                if member is not None and member.strip().lower() not in member_name.strip().lower():
+                    continue
+
+                events_participation_of_non_core_members[member_name] = events_participation_of_non_core_members.get(member_name,0) + 1
+
+    return events_participation_of_non_core_members
+
+@app.get("/analytics/students")
+def number_of_events_students_participated(club_name : str | None = None , student : str | None = None):
+    students_participation = {}
+    data = load_data()
+    for club in data:
+        if club_name is not None and club_name.strip().lower() not in club["club"]:
+            continue
+
+        for event in club["events"]:
+            participants_of_this_event = (event["participants"])
+            participants_of_this_event_set = set(event["participants"])
+
+            for student_name in participants_of_this_event:
+
+                if student_name not in participants_of_this_event_set:
+                    continue
+
+                if student is not None and student.strip().lower() not in student_name:
+                    continue
+
+                students_participation[student_name] = students_participation.get(student_name,0) + 1
+
+    return students_participation
+
