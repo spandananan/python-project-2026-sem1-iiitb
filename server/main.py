@@ -1,6 +1,7 @@
 from fastapi import FastAPI,HTTPException
 import json
 from pydantic import BaseModel,Field
+from datetime import datetime
 import os
 from typing import Annotated
 from fastapi.middleware.cors import CORSMiddleware
@@ -58,10 +59,6 @@ def comes_after(date1 : str , date2 : str):
     else:
         return True
 
-def save_data(data):
-    with open(DATA_DIR, "r") as file:
-        json.dump(DATA_DIR, data, indent = 8)
-
 ## TODO -> ADD CAPABILITY FOR JSON TO BE CREATED IF IT DOES NOT EXIST (BUT THIS REQUIRES EVENT AND CLUB DETAILS TO BE INSIDE OF THE MAIN.PY)
 def load_data():
     with open(DATA_DIR, "r", encoding="utf-8") as file:
@@ -91,6 +88,8 @@ def find_position_of_event(event: str, club: str):
     raise HTTPException(status_code=404, detail="Event not found (position of event)")
         
 
+def sortByDate(lst):
+    return sorted(lst, key=lambda x: datetime.strptime(x['date'], '%d-%m-%Y'), reverse=False)
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -116,13 +115,13 @@ def get_event(club_name: str | None = None , date_after: Annotated[str | None , 
             copy = ev.copy()
             copy["club"] = event["club"]
             events.append(copy)
-
+    events = sortByDate(events)
     return events
 
 #POST EVENT DETAILS
-@app.post("/events")
-def add_events(club: str, body: Event, role : str = "club core"):
-    if check_password(club.lower().strip(),body.model_dump(exclude_none = True)["password"]):
+@app.post("/events" , status_code = 201)
+def add_events(club: str, body: Event,password : str | None = None , role : str = "club core"):
+    if check_password(club.lower().strip(),password):
         if role.strip().lower() in "club core":
             #Loading data from JSON
             data = load_data()
@@ -145,7 +144,7 @@ def add_events(club: str, body: Event, role : str = "club core"):
     else:raise HTTPException(status_code=403, detail="Access Denied.")
 
 #DELETE EVENTS
-@app.delete("/events")
+@app.delete("/events" , status_code = 204)
 def delete_events(club:str = "Zense",title:str|None = None,password:str|None = None, role: str = "club core"):
     if check_password(club.lower().strip(),password):
         if role.strip().lower() in "club core":
@@ -164,8 +163,8 @@ def delete_events(club:str = "Zense",title:str|None = None,password:str|None = N
 
 #PATCH EVENT DETAILS
 @app.patch("/events")
-def patch_events(body: Event, event: str = "Strings & Stories" , club:str = "Symphony", role: str = "club core"):
-    if check_password(club.lower().strip(),body.model_dump(exclude_none = True)["password"]):
+def patch_events(body: Event,password:str|None = None, event: str = "Strings & Stories" , club:str = "Symphony", role: str = "club core"):
+    if check_password(club.lower().strip(),password):
         if role.strip().lower() in "club core" or role.strip.lower() in "club member":
             data = load_data()
             positionOfClub = find_position(club)

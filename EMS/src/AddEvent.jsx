@@ -14,7 +14,7 @@ function AddEvent() {
     const addEvent = async () => {
   try {
     console.log(title,venue,date,club,desc)
-    const response = await fetch(`http://localhost:8000/events?club=${club.toLowerCase()}`, {
+    const response = await fetch(`http://localhost:8000/events?club=${encodeURIComponent(club.toLowerCase())}&password=${encodeURIComponent(password)}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -37,7 +37,7 @@ function AddEvent() {
     if(response.status == 403){
         alert("Access Denied")
       }
-    if(response.status == 200){
+    if(response.status == 201){
         alert("Event Added Successfully")
       }
     

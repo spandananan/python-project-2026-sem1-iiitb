@@ -3,31 +3,31 @@
                 "club": "zense",
                 "members": [
                         {
-                                "name": "Aarav Mehta",
+                                "name": "aarav mehta",
                                 "isCore": true
                         },
                         {
-                                "name": "Isha Kulkarni",
+                                "name": "isha kulkarni",
                                 "isCore": true
                         },
                         {
-                                "name": "Rohan Desai",
+                                "name": "rohan desai",
                                 "isCore": true
                         },
                         {
-                                "name": "Ananya Rao",
+                                "name": "ananya rao",
                                 "isCore": false
                         },
                         {
-                                "name": "Kabir Shah",
+                                "name": "kabir shah",
                                 "isCore": false
                         },
                         {
-                                "name": "Meera Nair",
+                                "name": "meera nair",
                                 "isCore": false
                         },
                         {
-                                "name": "Dev Patel",
+                                "name": "dev patel",
                                 "isCore": false
                         }
                 ],
@@ -38,8 +38,8 @@
                                 "venue": "Extension Campus, Room 101",
                                 "date": "05-11-2026",
                                 "members": [
-                                        "Aarav Mehta",
-                                        "Isha Kulkarni"
+                                        "aarav mehta",
+                                        "isha kulkarni"
                                 ],
                                 "volunteers": [
                                         "Ananya Rao",
@@ -63,8 +63,8 @@
                                 "venue": "Innovation Lab",
                                 "date": "21-11-2026",
                                 "members": [
-                                        "Rohan Desai",
-                                        "Isha Kulkarni"
+                                        "rohan desai",
+                                        "isha kulkarni"
                                 ],
                                 "volunteers": [
                                         "Kabir Shah",
@@ -88,27 +88,27 @@
                 "club": "8bit",
                 "members": [
                         {
-                                "name": "Nikhil Verma",
+                                "name": "nikhil verma",
                                 "isCore": true
                         },
                         {
-                                "name": "Sana Iyer",
+                                "name": "sana iyer",
                                 "isCore": true
                         },
                         {
-                                "name": "Aditya Bose",
+                                "name": "aditya bose",
                                 "isCore": false
                         },
                         {
-                                "name": "Pooja Shetty",
+                                "name": "pooja shetty",
                                 "isCore": false
                         },
                         {
-                                "name": "Reyansh Gupta",
+                                "name": "reyansh gupta",
                                 "isCore": false
                         },
                         {
-                                "name": "Mihika Jain",
+                                "name": "mihika jain",
                                 "isCore": false
                         }
                 ],
@@ -119,8 +119,8 @@
                                 "venue": "Computer Lab 2",
                                 "date": "14-11-2026",
                                 "members": [
-                                        "Nikhil Verma",
-                                        "Sana Iyer"
+                                        "nikhil verma",
+                                        "sana iyer"
                                 ],
                                 "volunteers": [
                                         "Aditya Bose",
@@ -142,7 +142,7 @@
                                 "venue": "Student Activity Centre",
                                 "date": "28-11-2026",
                                 "members": [
-                                        "Sana Iyer"
+                                        "sana iyer"
                                 ],
                                 "volunteers": [
                                         "Nikhil Verma",
@@ -164,27 +164,27 @@
                 "club": "symphony",
                 "members": [
                         {
-                                "name": "Rhea Thomas",
+                                "name": "rhea thomas",
                                 "isCore": true
                         },
                         {
-                                "name": "Ira Das",
+                                "name": "ira das",
                                 "isCore": true
                         },
                         {
-                                "name": "Siddharth Menon",
+                                "name": "siddharth menon",
                                 "isCore": false
                         },
                         {
-                                "name": "Aditi Krishnan",
+                                "name": "aditi krishnan",
                                 "isCore": false
                         },
                         {
-                                "name": "Manav Kapoor",
+                                "name": "manav kapoor",
                                 "isCore": false
                         },
                         {
-                                "name": "Zoya Fernandes",
+                                "name": "zoya fernandes",
                                 "isCore": false
                         }
                 ],
@@ -195,8 +195,8 @@
                                 "venue": "Open Air Theatre",
                                 "date": "12-11-2026",
                                 "members": [
-                                        "Rhea Thomas",
-                                        "Ira Das"
+                                        "rhea thomas",
+                                        "ira das"
                                 ],
                                 "volunteers": [
                                         "Siddharth Menon",
@@ -218,7 +218,7 @@
                                 "venue": "Main Auditorium",
                                 "date": "03-12-2026",
                                 "members": [
-                                        "Ira Das"
+                                        "ira das"
                                 ],
                                 "volunteers": [
                                         "Rhea Thomas",
@@ -240,27 +240,27 @@
                 "club": "parvaaz",
                 "members": [
                         {
-                                "name": "Fatima Khan",
+                                "name": "fatima khan",
                                 "isCore": true
                         },
                         {
-                                "name": "Arjun Pillai",
+                                "name": "arjun pillai",
                                 "isCore": true
                         },
                         {
-                                "name": "Tara Menon",
+                                "name": "tara menon",
                                 "isCore": false
                         },
                         {
-                                "name": "Yash Bhat",
+                                "name": "yash bhat",
                                 "isCore": false
                         },
                         {
-                                "name": "Diya Shah",
+                                "name": "diya shah",
                                 "isCore": false
                         },
                         {
-                                "name": "Neil D'Souza",
+                                "name": "neil d'souza",
                                 "isCore": false
                         }
                 ],
@@ -271,8 +271,8 @@
                                 "venue": "Central Courtyard",
                                 "date": "18-11-2026",
                                 "members": [
-                                        "Fatima Khan",
-                                        "Arjun Pillai"
+                                        "fatima khan",
+                                        "arjun pillai"
                                 ],
                                 "volunteers": [
                                         "Tara Menon",
@@ -294,7 +294,7 @@
                                 "venue": "Seminar Hall B",
                                 "date": "06-12-2026",
                                 "members": [
-                                        "Arjun Pillai"
+                                        "arjun pillai"
                                 ],
                                 "volunteers": [
                                         "Fatima Khan",
@@ -317,27 +317,27 @@
                 "club": "pioneers",
                 "members": [
                         {
-                                "name": "Kavya Srinivasan",
+                                "name": "kavya srinivasan",
                                 "isCore": true
                         },
                         {
-                                "name": "Pranav Rao",
+                                "name": "pranav rao",
                                 "isCore": true
                         },
                         {
-                                "name": "Ishaan Chawla",
+                                "name": "ishaan chawla",
                                 "isCore": false
                         },
                         {
-                                "name": "Manya Sood",
+                                "name": "manya sood",
                                 "isCore": false
                         },
                         {
-                                "name": "Omkar Patil",
+                                "name": "omkar patil",
                                 "isCore": false
                         },
                         {
-                                "name": "Sia Mukherjee",
+                                "name": "sia mukherjee",
                                 "isCore": false
                         }
                 ],
@@ -348,8 +348,8 @@
                                 "venue": "Innovation Hub",
                                 "date": "20-11-2026",
                                 "members": [
-                                        "Kavya Srinivasan",
-                                        "Pranav Rao"
+                                        "kavya srinivasan",
+                                        "pranav rao"
                                 ],
                                 "volunteers": [
                                         "Ishaan Chawla",
@@ -371,7 +371,7 @@
                                 "venue": "Workshop Studio",
                                 "date": "10-12-2026",
                                 "members": [
-                                        "Pranav Rao"
+                                        "pranav rao"
                                 ],
                                 "volunteers": [
                                         "Kavya Srinivasan",
