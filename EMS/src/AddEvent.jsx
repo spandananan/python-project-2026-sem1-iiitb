@@ -14,7 +14,7 @@ function AddEvent() {
     const addEvent = async () => {
   try {
     console.log(title,venue,date,club,desc)
-    const response = await fetch(`http://localhost:8000/events?club=${encodeURIComponent(club.toLowerCase())}&password=${encodeURIComponent(password)}`, {
+    const response = await fetch(`http://localhost:8000/events?club=${encodeURIComponent(club.toLowerCase())}&password=${encodeURIComponent(pass)}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

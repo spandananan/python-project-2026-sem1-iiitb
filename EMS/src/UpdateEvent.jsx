@@ -2,7 +2,7 @@ import React from 'react'
 import './App.css'
 import { useState } from 'react'
 
-function AddEvent() {
+function UpdateEvent() {
 
     const [title , setTitle]= useState('')
     const [pass , setPass]= useState('')
@@ -11,11 +11,11 @@ function AddEvent() {
     const [venue , setVenue]= useState('')
     const [desc , setDesc]= useState('')
 
-    const addEvent = async () => {
+    const updateEvent = async () => {
   try {
     console.log(title,venue,date,club,desc)
-    const response = await fetch(`http://localhost:8000/events?club=${club.toLowerCase()}`, {
-      method: 'POST',
+    const response = await fetch(`http://localhost:8000/events?club=${encodeURIComponent(club.toLowerCase())}&event=${encodeURIComponent(title)}&password=${encodeURIComponent(pass)}`, {
+      method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
       },
@@ -33,12 +33,13 @@ function AddEvent() {
     });
 
     console.log(response)
-    if (!response.ok) {
       // throw new Error(`HTTP error! status: ${response.status}`);
-      if(response.status == 403){
+      if(response.status == 200){
+        alert("Successfull")
+      }
+      if(response.status == 400 || response.status == 403){
         alert("Access Denied")
       }
-    }
 
     const data = await response.json();
     console.log('Success:', data);
@@ -52,8 +53,8 @@ function AddEvent() {
       <section className="text-gray-400 bg-slate-950 body-font relative">
   <div className="container px-5 py-24 mx-auto">
     <div className="flex flex-col text-center w-full mb-12">
-      <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Add new event</h1>
-      <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify.</p>
+      <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Update event</h1>
+      <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Enter data in fields which you want to update</p>
     </div>
     <div className="lg:w-1/2 md:w-2/3 mx-auto">
       <div className="flex flex-wrap -m-2">
@@ -94,7 +95,7 @@ function AddEvent() {
           </div>
         </div>
         <div className="p-2 w-full">
-          <button  onClick={addEvent} className="flex mx-auto text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg">Add</button>
+          <button  onClick={updateEvent} className="flex mx-auto text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg">Update</button>
         </div>
         <div className="p-2 w-full pt-8 mt-8 border-t border-gray-800 text-center">
           <a className="text-green-400">example@email.com</a>
@@ -133,4 +134,4 @@ function AddEvent() {
   )
 }
 
-export default AddEvent
+export default UpdateEvent

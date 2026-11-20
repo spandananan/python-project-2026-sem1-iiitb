@@ -86,10 +86,15 @@ def find_position_of_event(event: str, club: str):
         if event.strip().lower() in data[find_position(club)]["events"][i]["title"].strip().lower():
             return i
     raise HTTPException(status_code=404, detail="Event not found (position of event)")
-        
-
+    
 def sortByDate(lst):
     return sorted(lst, key=lambda x: datetime.strptime(x['date'], '%d-%m-%Y'), reverse=False)
+
+def searchInList(key , list , target):
+    for i in list:
+        if i[key] == target:
+            return True
+        else: return False
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -121,6 +126,7 @@ def get_event(club_name: str | None = None , date_after: Annotated[str | None , 
 #POST EVENT DETAILS
 @app.post("/events" , status_code = 201)
 def add_events(club: str, body: Event,password : str | None = None , role : str = "club core"):
+    print(password)
     if check_password(club.lower().strip(),password):
         if role.strip().lower() in "club core":
             #Loading data from JSON
@@ -145,7 +151,7 @@ def add_events(club: str, body: Event,password : str | None = None , role : str 
 
 #DELETE EVENTS
 @app.delete("/events" , status_code = 204)
-def delete_events(club:str = "Zense",title:str|None = None,password:str|None = None, role: str = "club core"):
+def delete_events(club:str = "zense",title:str|None = None,password:str|None = None, role: str = "club core"):
     if check_password(club.lower().strip(),password):
         if role.strip().lower() in "club core":
             #Loading data from JSON
@@ -165,7 +171,7 @@ def delete_events(club:str = "Zense",title:str|None = None,password:str|None = N
 @app.patch("/events")
 def patch_events(body: Event,password:str|None = None, event: str = "Strings & Stories" , club:str = "Symphony", role: str = "club core"):
     if check_password(club.lower().strip(),password):
-        if role.strip().lower() in "club core" or role.strip.lower() in "club member":
+        if role.strip().lower() in "club core" or role.strip().lower() in "club member":
             data = load_data()
             positionOfClub = find_position(club)
             positionOfEvent = find_position_of_event(event, club)
@@ -237,7 +243,7 @@ def number_of_events_for_each_club_member(club_name: str | None = None , member 
 
             for member_name in volunteers_of_this_event:
 
-                if member_name not in member_set:
+                if member_name.strip().lower() not in member_set:
                     continue
 
                 if member is not None and member.strip().lower() not in member_name.strip().lower():
@@ -270,4 +276,19 @@ def number_of_events_students_participated(club_name : str | None = None , stude
                 students_participation[student_name] = students_participation.get(student_name,0) + 1
 
     return students_participation
+
+@app.get("/club")
+def get_clubs(club_name:str | None = None , event_name:str|None = None,member_name:str|None = None):
+    data = load_data()
+    results = []
+    for club in data:
+        if(event_name is not None and not searchInList("events" , data , event_name)): 
+            continue
+        if(member_name is not None and not searchInList("members" , data , member_name)):
+            continue
+        if(club_name is not None and not club_name in club["club"]):
+            continue
+        results.append(club)
+    return results
+
 

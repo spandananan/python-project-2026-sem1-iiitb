@@ -1,11 +1,19 @@
 import { useState,useEffect } from 'react'
 import './App.css'
 import events from './assets/events.json'
+import Login from './login.jsx';
+import AddEvent from './AddEvent.jsx';
+import DeleteEvent from './DeleteEvent.jsx';
+import UpdateEvent from './UpdateEvent.jsx';
+import Home from './Home.jsx';
+import { BrowserRouter , Link , Routes , Route } from 'react-router-dom';
+
 
 function App() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [isOpen , setIsOpen] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -27,41 +35,74 @@ function App() {
   }, []);
 
   return (
-    <div className='min-h-screen bg-slate-950'>
-      {data.map((ev)=>{
-        return(
-          <div className="parent">
-      <section className="text-gray-400 bg-slate-950 body-font overflow-hidden">
-        <div className="container px-5 py-10 mx-auto shadow-lg shadow-green-500/20 my-5 rounded-lg">
-          <div className="-my-8 divide-y-2 divide-gray-800">
-            <div className="py-8 flex flex-wrap md:flex-nowrap">
-              <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-                <span className="font-semibold title-font text-green-500 bg-gray-800 px-4 py-1 rounded-lg w-fit">{ev.club}</span>
-                <span className="mt-1 text-gray-500 text-sm">{ev.date}</span>
-              </div>
-              <div className="md:flex-grow">
-                <h2 className="text-2xl font-medium text-white title-font mb-2">{ev.title}</h2>
-                <p className="leading-relaxed">Venue : {ev.venue}</p>
-                <p className="leading-relaxed my-2">Guests : {ev.guests.map((e)=>{return(
-                  <span className="font-semibold title-font mx-2 bg-gray-800 px-2 py-1 rounded-lg w-fit">{e}</span>
-                )})}</p>
-                <h2 className="mt-5 leading-relaxed font-light mb-2">{ev.description}</h2>
-                <a className="text-green-400 inline-flex items-center mt-4">Register
-                  <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14"></path>
-                    <path d="M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      </div>
-        )
-      })}
-      
+    <>
+    <BrowserRouter>
+    <header className="text-gray-400 bg-gray-900 body-font">
+          <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a className="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-10 h-10 text-white p-2 bg-green-500 rounded-full" viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+              </svg>
+              <span className="ml-3 text-xl">EMS</span>
+            </a>
+            <nav className=" md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700 flex items-center text-base justify-center">
+              {/* <Link to="/" className="mr-5 hover:text-white">Home</Link>
+              <Link to="/AddEvent" className="mr-5 hover:text-white">Add Event</Link>
+              <Link to="/DeleteEvent" className="mr-5 hover:text-white">Remove Event</Link>
+              <Link to="/UpdateEvent" className="mr-5 hover:text-white">Update Event</Link> */}
+      <Link to="/" className="mr-5 hover:text-white">Home</Link>
+              <div className="dropdown mr-5">
+      <button onClick={() => setIsOpen(!isOpen)}>
+        Events
+      </button>
+      {isOpen && (
+        <ul className="dropdown-menu absolute z-20">
+          <li className=' p-2 w-full bg-slate-800'>
+            <Link to="/AddEvent" onClick={() => setIsOpen(false)}>
+              Add Event
+            </Link>
+          </li>
+          <li className=' p-2 w-full bg-slate-800'>
+            <Link to="/UpdateEvent" onClick={() => setIsOpen(false)}>
+              Update Event
+            </Link>
+          </li>
+          <li className=' p-2 w-full bg-slate-800'>
+            <Link to="/DeleteEvent" onClick={() => setIsOpen(false)}>
+              Remove Event
+            </Link>
+          </li>
+        </ul>
+      )}
     </div>
+              <a className="mr-5 hover:text-white">Voluteer</a>
+            </nav>
+            {/* <Link to="/login">
+            <button className="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">Sign in 
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+            </button>
+            </Link> */}
+            
+          </div>
+        </header>
+        {/* <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/AddEvent" element={<AddEvent />} />
+        <Route path="/DeleteEvent" element={<DeleteEvent />} />
+        <Route path="/UpdateEvent" element={<UpdateEvent />} />
+        <Route path="/login" element={<Login />} />
+        </Routes> */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/AddEvent" element={<AddEvent />} />
+          <Route path="/DeleteEvent" element={<DeleteEvent />} />
+          <Route path="/UpdateEvent" element={<UpdateEvent />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </BrowserRouter>
+      </>
   )
 }
 
