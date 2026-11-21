@@ -1,393 +1,423 @@
 [
-        {
-                "club": "zense",
-                "members": [
-                        {
-                                "name": "aarav mehta",
-                                "isCore": true
-                        },
-                        {
-                                "name": "isha kulkarni",
-                                "isCore": true
-                        },
-                        {
-                                "name": "rohan desai",
-                                "isCore": true
-                        },
-                        {
-                                "name": "ananya rao",
-                                "isCore": false
-                        },
-                        {
-                                "name": "kabir shah",
-                                "isCore": false
-                        },
-                        {
-                                "name": "meera nair",
-                                "isCore": false
-                        },
-                        {
-                                "name": "dev patel",
-                                "isCore": false
-                        }
-                ],
-                "events": [
-                        {
-                                "title": "Tech Triad",
-                                "description": "A three-part tech event featuring talks, a live demo, and a hands-on challenge. Open to all students curious about software, hardware, and AI.",
-                                "venue": "Extension Campus, Room 101",
-                                "date": "05-11-2026",
-                                "members": [
-                                        "aarav mehta",
-                                        "isha kulkarni"
-                                ],
-                                "volunteers": [
-                                        "Ananya Rao",
-                                        "Kabir Shah",
-                                        "Dev Patel"
-                                ],
-                                "guests": [
-                                        "Dr. Neel Joshi",
-                                        "Sana Merchant"
-                                ],
-                                "participants": [
-                                        "Meera Nair",
-                                        "Rohan Desai",
-                                        "Vihaan Sethi",
-                                        "Tara Menon"
-                                ]
-                        },
-                        {
-                                "title": "Build-a-thon Weekend",
-                                "description": "A weekend-long hackathon where teams ideate, build, and present working prototypes to a panel of judges. Mentors will be available throughout.",
-                                "venue": "Innovation Lab",
-                                "date": "21-11-2026",
-                                "members": [
-                                        "rohan desai",
-                                        "isha kulkarni"
-                                ],
-                                "volunteers": [
-                                        "Kabir Shah",
-                                        "Meera Nair",
-                                        "Dev Patel"
-                                ],
-                                "guests": [
-                                        "Prof. Kavita Rao"
-                                ],
-                                "participants": [
-                                        "Aarav Mehta",
-                                        "Ananya Rao",
-                                        "Yash Bhat",
-                                        "Diya Shah",
-                                        "Arjun Pillai"
-                                ]
-                        }
-                ]
-        },
-        {
-                "club": "8bit",
-                "members": [
-                        {
-                                "name": "nikhil verma",
-                                "isCore": true
-                        },
-                        {
-                                "name": "sana iyer",
-                                "isCore": true
-                        },
-                        {
-                                "name": "aditya bose",
-                                "isCore": false
-                        },
-                        {
-                                "name": "pooja shetty",
-                                "isCore": false
-                        },
-                        {
-                                "name": "reyansh gupta",
-                                "isCore": false
-                        },
-                        {
-                                "name": "mihika jain",
-                                "isCore": false
-                        }
-                ],
-                "events": [
-                        {
-                                "title": "Pixel Panic: Game Jam",
-                                "description": "A fast-paced game jam where teams build a playable game from scratch around a surprise theme. Artists, coders, and designers are all welcome.",
-                                "venue": "Computer Lab 2",
-                                "date": "14-11-2026",
-                                "members": [
-                                        "nikhil verma",
-                                        "sana iyer"
-                                ],
-                                "volunteers": [
-                                        "Aditya Bose",
-                                        "Pooja Shetty"
-                                ],
-                                "guests": [
-                                        "Karan Malhotra"
-                                ],
-                                "participants": [
-                                        "Reyansh Gupta",
-                                        "Mihika Jain",
-                                        "Aarav Mehta",
-                                        "Ira Das"
-                                ]
-                        },
-                        {
-                                "title": "Retro Arcade Night",
-                                "description": "An evening of classic arcade games, friendly tournaments, and prizes. Come relive the golden age of gaming with friends.",
-                                "venue": "Student Activity Centre",
-                                "date": "28-11-2026",
-                                "members": [
-                                        "sana iyer"
-                                ],
-                                "volunteers": [
-                                        "Nikhil Verma",
-                                        "Mihika Jain"
-                                ],
-                                "guests": [
-                                        "Prof. Sameer Kulkarni"
-                                ],
-                                "participants": [
-                                        "Aditya Bose",
-                                        "Pooja Shetty",
-                                        "Kabir Shah",
-                                        "Rhea Thomas"
-                                ]
-                        }
-                ]
-        },
-        {
-                "club": "symphony",
-                "members": [
-                        {
-                                "name": "rhea thomas",
-                                "isCore": true
-                        },
-                        {
-                                "name": "ira das",
-                                "isCore": true
-                        },
-                        {
-                                "name": "siddharth menon",
-                                "isCore": false
-                        },
-                        {
-                                "name": "aditi krishnan",
-                                "isCore": false
-                        },
-                        {
-                                "name": "manav kapoor",
-                                "isCore": false
-                        },
-                        {
-                                "name": "zoya fernandes",
-                                "isCore": false
-                        }
-                ],
-                "events": [
-                        {
-                                "title": "Strings & Stories",
-                                "description": "An open-air evening of acoustic music paired with storytelling and poetry. Relax under the sky and enjoy live performances by students.",
-                                "venue": "Open Air Theatre",
-                                "date": "12-11-2026",
-                                "members": [
-                                        "rhea thomas",
-                                        "ira das"
-                                ],
-                                "volunteers": [
-                                        "Siddharth Menon",
-                                        "Aditi Krishnan"
-                                ],
-                                "guests": [
-                                        "The campus acoustic ensemble"
-                                ],
-                                "participants": [
-                                        "Manav Kapoor",
-                                        "Zoya Fernandes",
-                                        "Sana Iyer",
-                                        "Tara Menon"
-                                ]
-                        },
-                        {
-                                "title": "Campus Unplugged",
-                                "description": "A stripped-down live concert showcasing solo and band acts from across campus. Expect covers, originals, and surprise collaborations.",
-                                "venue": "Main Auditorium",
-                                "date": "03-12-2026",
-                                "members": [
-                                        "ira das"
-                                ],
-                                "volunteers": [
-                                        "Rhea Thomas",
-                                        "Manav Kapoor",
-                                        "Zoya Fernandes"
-                                ],
-                                "guests": [
-                                        "Alumni Music Collective"
-                                ],
-                                "participants": [
-                                        "Aditi Krishnan",
-                                        "Siddharth Menon",
-                                        "Nikhil Verma"
-                                ]
-                        }
-                ]
-        },
-        {
-                "club": "parvaaz",
-                "members": [
-                        {
-                                "name": "fatima khan",
-                                "isCore": true
-                        },
-                        {
-                                "name": "arjun pillai",
-                                "isCore": true
-                        },
-                        {
-                                "name": "tara menon",
-                                "isCore": false
-                        },
-                        {
-                                "name": "yash bhat",
-                                "isCore": false
-                        },
-                        {
-                                "name": "diya shah",
-                                "isCore": false
-                        },
-                        {
-                                "name": "neil d'souza",
-                                "isCore": false
-                        }
-                ],
-                "events": [
-                        {
-                                "title": "Open Mic: Unfiltered",
-                                "description": "An open stage for poetry, stand-up, music, and storytelling. Sign up on the spot and share your talent with a supportive audience.",
-                                "venue": "Central Courtyard",
-                                "date": "18-11-2026",
-                                "members": [
-                                        "fatima khan",
-                                        "arjun pillai"
-                                ],
-                                "volunteers": [
-                                        "Tara Menon",
-                                        "Neil D'Souza"
-                                ],
-                                "guests": [
-                                        "Campus Poetry Circle"
-                                ],
-                                "participants": [
-                                        "Yash Bhat",
-                                        "Diya Shah",
-                                        "Rhea Thomas",
-                                        "Kabir Shah"
-                                ]
-                        },
-                        {
-                                "title": "Theatre in a Day",
-                                "description": "A one-day theatre workshop where participants write, rehearse, and perform a short play by evening. No prior acting experience needed.",
-                                "venue": "Seminar Hall B",
-                                "date": "06-12-2026",
-                                "members": [
-                                        "arjun pillai"
-                                ],
-                                "volunteers": [
-                                        "Fatima Khan",
-                                        "Diya Shah",
-                                        "Yash Bhat"
-                                ],
-                                "guests": [
-                                        "Mira Sen, theatre facilitator"
-                                ],
-                                "participants": [
-                                        "Neil D'Souza",
-                                        "Tara Menon",
-                                        "Ira Das",
-                                        "Manav Kapoor"
-                                ]
-                        }
-                ]
-        },
-        {
-                "club": "pioneers",
-                "members": [
-                        {
-                                "name": "kavya srinivasan",
-                                "isCore": true
-                        },
-                        {
-                                "name": "pranav rao",
-                                "isCore": true
-                        },
-                        {
-                                "name": "ishaan chawla",
-                                "isCore": false
-                        },
-                        {
-                                "name": "manya sood",
-                                "isCore": false
-                        },
-                        {
-                                "name": "omkar patil",
-                                "isCore": false
-                        },
-                        {
-                                "name": "sia mukherjee",
-                                "isCore": false
-                        }
-                ],
-                "events": [
-                        {
-                                "title": "Launchpad: Startup Sprint",
-                                "description": "A startup sprint where teams pitch an idea, validate it, and present a business plan to mentors and guest entrepreneurs.",
-                                "venue": "Innovation Hub",
-                                "date": "20-11-2026",
-                                "members": [
-                                        "kavya srinivasan",
-                                        "pranav rao"
-                                ],
-                                "volunteers": [
-                                        "Ishaan Chawla",
-                                        "Manya Sood"
-                                ],
-                                "guests": [
-                                        "Ritika Nambiar, startup founder"
-                                ],
-                                "participants": [
-                                        "Omkar Patil",
-                                        "Sia Mukherjee",
-                                        "Aarav Mehta",
-                                        "Pooja Shetty"
-                                ]
-                        },
-                        {
-                                "title": "Design Thinking Challenge",
-                                "description": "A hands-on workshop where teams use design thinking to solve a real campus problem, from empathy mapping to prototype and pitch.",
-                                "venue": "Workshop Studio",
-                                "date": "10-12-2026",
-                                "members": [
-                                        "pranav rao"
-                                ],
-                                "volunteers": [
-                                        "Kavya Srinivasan",
-                                        "Omkar Patil",
-                                        "Sia Mukherjee"
-                                ],
-                                "guests": [
-                                        "Prof. Anil Menon"
-                                ],
-                                "participants": [
-                                        "Ishaan Chawla",
-                                        "Manya Sood",
-                                        "Dev Patel",
-                                        "Fatima Khan"
-                                ]
-                        }
-                ]
-        }
+  {
+    "club": "zense",
+    "members": [
+      {
+        "name": "aarav mehta",
+        "isCore": true
+      },
+      {
+        "name": "isha kulkarni",
+        "isCore": true
+      },
+      {
+        "name": "rohan desai",
+        "isCore": true
+      },
+      {
+        "name": "ananya rao",
+        "isCore": false
+      },
+      {
+        "name": "kabir shah",
+        "isCore": false
+      },
+      {
+        "name": "meera nair",
+        "isCore": false
+      },
+      {
+        "name": "dev patel",
+        "isCore": false
+      }
+    ],
+    "events": [
+      {
+        "title": "Tech Triad",
+        "description": "A three-part tech event featuring talks, a live demo, and a hands-on challenge. Open to all students curious about software, hardware, and AI.",
+        "venue": "Extension Campus, Room 101",
+        "date": "05-11-2026",
+        "members": [
+          "aarav mehta",
+          "isha kulkarni"
+        ],
+        "volunteers": [
+          "Ananya Rao",
+          "Kabir Shah",
+          "Dev Patel"
+        ],
+        "guests": [
+          "Dr. Neel Joshi",
+          "Sana Merchant"
+        ],
+        "participants": [
+          "Meera Nair",
+          "Rohan Desai",
+          "Vihaan Sethi",
+          "Tara Menon"
+        ],
+        "need_volunteers": true,
+        "desc_volunteer": "Manage registration at Room 101, help set up the live demo, and guide participants through the hands-on challenge."
+      },
+      {
+        "title": "Build-a-thon Weekend",
+        "description": "A weekend-long hackathon where teams ideate, build, and present working prototypes to a panel of judges. Mentors will be available throughout.",
+        "venue": "Innovation Lab",
+        "date": "21-11-2026",
+        "members": [
+          "rohan desai",
+          "isha kulkarni"
+        ],
+        "volunteers": [
+          "Kabir Shah",
+          "Meera Nair",
+          "Dev Patel"
+        ],
+        "guests": [
+          "Prof. Kavita Rao"
+        ],
+        "participants": [
+          "Aarav Mehta",
+          "Ananya Rao",
+          "Yash Bhat",
+          "Diya Shah",
+          "Arjun Pillai"
+        ],
+        "need_volunteers": false,
+        "desc_volunteer": "Assist teams at the Innovation Lab, coordinate mentors and meals, and help run judging and presentations."
+      }
+    ],
+    "need_members": true,
+    "desc_member": "Help organise tech talks, workshops, and hackathons, and mentor participants on software, hardware, and AI projects."
+  },
+  {
+    "club": "8bit",
+    "members": [
+      {
+        "name": "nikhil verma",
+        "isCore": true
+      },
+      {
+        "name": "sana iyer",
+        "isCore": true
+      },
+      {
+        "name": "aditya bose",
+        "isCore": false
+      },
+      {
+        "name": "pooja shetty",
+        "isCore": false
+      },
+      {
+        "name": "reyansh gupta",
+        "isCore": false
+      },
+      {
+        "name": "mihika jain",
+        "isCore": false
+      }
+    ],
+    "events": [
+      {
+        "title": "Pixel Panic: Game Jam",
+        "description": "A fast-paced game jam where teams build a playable game from scratch around a surprise theme. Artists, coders, and designers are all welcome.",
+        "venue": "Computer Lab 2",
+        "date": "14-11-2026",
+        "members": [
+          "nikhil verma",
+          "sana iyer"
+        ],
+        "volunteers": [
+          "Aditya Bose",
+          "Pooja Shetty"
+        ],
+        "guests": [
+          "Karan Malhotra"
+        ],
+        "participants": [
+          "Reyansh Gupta",
+          "Mihika Jain",
+          "Aarav Mehta",
+          "Ira Das"
+        ],
+        "need_volunteers": false,
+        "desc_volunteer": "Set up the Computer Lab 2 workstations, announce the surprise theme, and help teams with submissions and playtesting."
+      },
+      {
+        "title": "Retro Arcade Night",
+        "description": "An evening of classic arcade games, friendly tournaments, and prizes. Come relive the golden age of gaming with friends.",
+        "venue": "Student Activity Centre",
+        "date": "28-11-2026",
+        "members": [
+          "sana iyer"
+        ],
+        "volunteers": [
+          "Nikhil Verma",
+          "Mihika Jain"
+        ],
+        "guests": [
+          "Prof. Sameer Kulkarni"
+        ],
+        "participants": [
+          "Aditya Bose",
+          "Pooja Shetty",
+          "Kabir Shah",
+          "Rhea Thomas"
+        ],
+        "need_volunteers": true,
+        "desc_volunteer": "Run the game stations, keep tournament brackets and scores, and hand out prizes."
+      }
+    ],
+    "need_members": false,
+    "desc_member": "Help run game jams and gaming events, and contribute as a coder, artist, or designer on club projects."
+  },
+  {
+    "club": "symphony",
+    "members": [
+      {
+        "name": "rhea thomas",
+        "isCore": true
+      },
+      {
+        "name": "ira das",
+        "isCore": true
+      },
+      {
+        "name": "siddharth menon",
+        "isCore": false
+      },
+      {
+        "name": "aditi krishnan",
+        "isCore": false
+      },
+      {
+        "name": "manav kapoor",
+        "isCore": false
+      },
+      {
+        "name": "zoya fernandes",
+        "isCore": false
+      }
+    ],
+    "events": [
+      {
+        "title": "Strings & Stories",
+        "description": "An open-air evening of acoustic music paired with storytelling and poetry. Relax under the sky and enjoy live performances by students.",
+        "venue": "Open Air Theatre",
+        "date": "12-11-2026",
+        "members": [
+          "rhea thomas",
+          "ira das"
+        ],
+        "volunteers": [
+          "Siddharth Menon",
+          "Aditi Krishnan"
+        ],
+        "guests": [
+          "The campus acoustic ensemble"
+        ],
+        "participants": [
+          "Manav Kapoor",
+          "Zoya Fernandes",
+          "Sana Iyer",
+          "Tara Menon"
+        ],
+        "need_volunteers": true,
+        "desc_volunteer": "Arrange seating and sound at the Open Air Theatre, manage the performer lineup, and guide the audience."
+      },
+      {
+        "title": "Campus Unplugged",
+        "description": "A stripped-down live concert showcasing solo and band acts from across campus. Expect covers, originals, and surprise collaborations.",
+        "venue": "Main Auditorium",
+        "date": "03-12-2026",
+        "members": [
+          "ira das"
+        ],
+        "volunteers": [
+          "Rhea Thomas",
+          "Manav Kapoor",
+          "Zoya Fernandes"
+        ],
+        "guests": [
+          "Alumni Music Collective"
+        ],
+        "participants": [
+          "Aditi Krishnan",
+          "Siddharth Menon",
+          "Nikhil Verma"
+        ],
+        "need_volunteers": false,
+        "desc_volunteer": "Handle backstage coordination, stage and sound setup, and performer check-in at the Main Auditorium."
+      }
+    ],
+    "need_members": true,
+    "desc_member": "Help coordinate music events, manage rehearsals and logistics, and perform or support acts on stage."
+  },
+  {
+    "club": "parvaaz",
+    "members": [
+      {
+        "name": "fatima khan",
+        "isCore": true
+      },
+      {
+        "name": "arjun pillai",
+        "isCore": true
+      },
+      {
+        "name": "tara menon",
+        "isCore": false
+      },
+      {
+        "name": "yash bhat",
+        "isCore": false
+      },
+      {
+        "name": "diya shah",
+        "isCore": false
+      },
+      {
+        "name": "neil d'souza",
+        "isCore": false
+      }
+    ],
+    "events": [
+      {
+        "title": "Open Mic: Unfiltered",
+        "description": "An open stage for poetry, stand-up, music, and storytelling. Sign up on the spot and share your talent with a supportive audience.",
+        "venue": "Central Courtyard",
+        "date": "18-11-2026",
+        "members": [
+          "fatima khan",
+          "arjun pillai"
+        ],
+        "volunteers": [
+          "Tara Menon",
+          "Neil D'Souza"
+        ],
+        "guests": [
+          "Campus Poetry Circle"
+        ],
+        "participants": [
+          "Yash Bhat",
+          "Diya Shah",
+          "Rhea Thomas",
+          "Kabir Shah"
+        ],
+        "need_volunteers": false,
+        "desc_volunteer": "Manage the performer sign-up sheet, keep the speaking order, and time each act."
+      },
+      {
+        "title": "Theatre in a Day",
+        "description": "A one-day theatre workshop where participants write, rehearse, and perform a short play by evening. No prior acting experience needed.",
+        "venue": "Seminar Hall B",
+        "date": "06-12-2026",
+        "members": [
+          "arjun pillai"
+        ],
+        "volunteers": [
+          "Fatima Khan",
+          "Diya Shah",
+          "Yash Bhat"
+        ],
+        "guests": [
+          "Mira Sen, theatre facilitator"
+        ],
+        "participants": [
+          "Neil D'Souza",
+          "Tara Menon",
+          "Ira Das",
+          "Manav Kapoor"
+        ],
+        "need_volunteers": true,
+        "desc_volunteer": "Help groups with scripts and props, keep rehearsals on schedule, and manage the evening performance."
+      }
+    ],
+    "need_members": false,
+    "desc_member": "Help plan open mics and theatre workshops, handle performer sign-ups, and support the stage and audience."
+  },
+  {
+    "club": "pioneers",
+    "members": [
+      {
+        "name": "kavya srinivasan",
+        "isCore": true
+      },
+      {
+        "name": "pranav rao",
+        "isCore": true
+      },
+      {
+        "name": "ishaan chawla",
+        "isCore": false
+      },
+      {
+        "name": "manya sood",
+        "isCore": false
+      },
+      {
+        "name": "omkar patil",
+        "isCore": false
+      },
+      {
+        "name": "sia mukherjee",
+        "isCore": false
+      }
+    ],
+    "events": [
+      {
+        "title": "Launchpad: Startup Sprint",
+        "description": "A startup sprint where teams pitch an idea, validate it, and present a business plan to mentors and guest entrepreneurs.",
+        "venue": "Innovation Hub",
+        "date": "20-11-2026",
+        "members": [
+          "kavya srinivasan",
+          "pranav rao"
+        ],
+        "volunteers": [
+          "Ishaan Chawla",
+          "Manya Sood"
+        ],
+        "guests": [
+          "Ritika Nambiar, startup founder"
+        ],
+        "participants": [
+          "Omkar Patil",
+          "Sia Mukherjee",
+          "Aarav Mehta",
+          "Pooja Shetty"
+        ],
+        "need_volunteers": true,
+        "desc_volunteer": "Manage team check-in, keep time for pitches, and guide guest mentors between teams."
+      },
+      {
+        "title": "Design Thinking Challenge",
+        "description": "A hands-on workshop where teams use design thinking to solve a real campus problem, from empathy mapping to prototype and pitch.",
+        "venue": "Workshop Studio",
+        "date": "10-12-2026",
+        "members": [
+          "pranav rao"
+        ],
+        "volunteers": [
+          "Kavya Srinivasan",
+          "Omkar Patil",
+          "Sia Mukherjee"
+        ],
+        "guests": [
+          "Prof. Anil Menon"
+        ],
+        "participants": [
+          "Ishaan Chawla",
+          "Manya Sood",
+          "Dev Patel",
+          "Fatima Khan"
+        ],
+        "need_volunteers": false,
+        "desc_volunteer": "Set up the Workshop Studio, hand out materials, and help teams through each stage from empathy mapping to pitch."
+      }
+    ],
+    "need_members": true,
+    "desc_member": "Help organise startup and design-thinking events, line up mentors and guests, and support teams through their pitches."
+  }
 ]
