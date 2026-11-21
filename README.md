@@ -23,6 +23,20 @@ Open another linux terminal in project directory and enter following commands
 ```
 
 
+## Filters
+
+#### Get all events
+
+```http
+  GET /events
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `date_after` | `DD-MM-YYYY` | sends all events on and after given date |
+| `club_name` | `string` | sends all events with given club |
+| `event_name` | `string` | filters event name with given query |
+
 ## Authors
 
 [spandan Poojara](https://www.github.com/spandancoder2)
